@@ -13,7 +13,7 @@ CONFIG   += warn_on debug
 TEMPLATE = app
 
 SOURCES += \
-    xmlhttprequest_test.cpp
+    main.cpp
 
 QMAKE_CXXFLAGS += -Wall -Wextra -Wconversion -DQT_DEPRECATED_WARNINGS
 

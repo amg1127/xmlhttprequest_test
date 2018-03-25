@@ -64,4 +64,4 @@ int main(int argc, char *argv[]) {
     return (returnValue);
 }
 
-#include "xmlhttprequest_test.moc"
+#include "main.moc"
