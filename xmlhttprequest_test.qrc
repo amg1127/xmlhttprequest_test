@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>xmlhttprequest_test.js</file>
+    </qresource>
+</RCC>
