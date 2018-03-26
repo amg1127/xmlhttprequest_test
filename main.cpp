@@ -34,7 +34,8 @@ signals:
 
 int main(int argc, char *argv[]) {
     QCoreApplication a(argc, argv);
-    qDebug("Starting main program...");
+    qDebug("Starting main program... Qt version is: ");
+    qDebug(QT_VERSION_STR);
     QNetworkProxyFactory::setUseSystemConfiguration (true);
     QQmlEngine* qmlEngine = new QQmlEngine ();
     QtRealBridge* qtRealBridge = new QtRealBridge ();
