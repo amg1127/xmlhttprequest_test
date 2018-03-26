@@ -18,7 +18,8 @@ SOURCES += \
 QMAKE_CXXFLAGS += -Wall -Wextra -Wconversion -DQT_DEPRECATED_WARNINGS
 
 DISTFILES += \
-    xmlhttprequest_test.js
+    xmlhttprequest_test.js \
+    xmlhttprequest_test.html
 
 RESOURCES += \
     xmlhttprequest_test.qrc
