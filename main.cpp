@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include <QFile>
 #include <QJSValue>
+#include <QNetworkProxyFactory>
 #include <QQmlEngine>
 #include <QTextStream>
 #include <QTimer>
@@ -34,6 +35,7 @@ signals:
 int main(int argc, char *argv[]) {
     QCoreApplication a(argc, argv);
     qDebug("Starting main program...");
+    QNetworkProxyFactory::setUseSystemConfiguration (true);
     QQmlEngine* qmlEngine = new QQmlEngine ();
     QtRealBridge* qtRealBridge = new QtRealBridge ();
     QObject::connect (qtRealBridge, &QtRealBridge::finishRequest, &a, &QCoreApplication::quit);
