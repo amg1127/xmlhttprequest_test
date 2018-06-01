@@ -13,7 +13,6 @@ qtBridge.ping ();
 function startXMLHttpRequest (name, URL, returnValue) {
     console.log ("Starting XMLHttpRequest '" + name + "'...");
     var xhr = new XMLHttpRequest ();
-    xhr.open ("GET", URL, true);
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
             try {
@@ -45,6 +44,7 @@ function startXMLHttpRequest (name, URL, returnValue) {
     xhr.onreadystatechange = function () {
         console.log ("XMLHttpRequest '" + name + "': readyState is now #" + xhr.readyState + "...");
     }
+    xhr.open ("GET", URL, true);
     xhr.send ();
     console.log ("XMLHttpRequest '" + name + "' started.");
     cntXmlRequests++;
@@ -61,6 +61,7 @@ function startAllRequests () {
     console.log ("Starting XMLHttpRequests...");
     startXMLHttpRequest ("YouTubeV3API", "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=eij0rOmSf5E&key=an%20invalid%20API%20key", finishXMLHttpRequest);
     startXMLHttpRequest ("JSONplaceholder", "https://jsonplaceholder.typicode.com/posts/1", finishXMLHttpRequest);
+    startXMLHttpRequest ("localhost", "http://localhost:54321/", finishXMLHttpRequest);
 };
 
 //////////////////////////////////////
